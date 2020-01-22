@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PLF_Uebung</string>
+    <string name="firstname">Vorname</string>
+    <string name="age">Alter</string>
+    <string name="lastname">Nachname</string>
+    <string name="add">HINZUFÜGEN</string>
+</resources>

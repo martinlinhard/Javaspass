@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow android:layout_weight="0.5">
+
+        <EditText
+            android:id="@+id/tvFirstname"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50sp"
+            android:layout_marginRight="50sp"
+            android:layout_weight="1"
+            android:hint="@string/firstname" />
+    </TableRow>
+
+    <TableRow android:layout_weight="0.5">
+
+        <EditText
+            android:id="@+id/tvLastname"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50sp"
+            android:layout_marginRight="50sp"
+            android:layout_weight="1"
+            android:hint="@string/lastname" />
+    </TableRow>
+
+    <TableRow android:layout_weight="0.5">
+
+        <EditText
+            android:id="@+id/tvAge"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50sp"
+            android:layout_marginRight="50sp"
+            android:layout_weight="1"
+            android:hint="@string/age"
+            android:inputType="numberSigned" />
+    </TableRow>
+
+    <TableRow android:layout_weight="0.5">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginRight="50sp"
+            android:layout_weight="1"
+            android:text="@string/add" />
+    </TableRow>
+
+    <TableRow android:layout_weight="1">
+
+        <EditText
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="50sp"
+            android:id="@+id/outputET"
+            android:lines="20"
+            android:layout_marginRight="50sp"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_weight="0.5"
+        >
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50sp"
+            android:layout_weight="1"
+            android:checkedButton="@id/rbFirstname"
+            android:id="@+id/rGroup"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbFirstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/firstname" />
+
+            <RadioButton
+                android:id="@+id/rbLastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/lastname" />
+
+            <RadioButton
+                android:id="@+id/rbAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/age" />
+        </RadioGroup>
+    </TableRow>
+</TableLayout>

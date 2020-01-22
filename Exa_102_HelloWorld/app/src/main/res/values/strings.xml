@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Exa_102_HelloWorld</string>
+    <string name="app_header">Welcome to our first app</string>
+    <string name="new_text">Hello %s</string>
+</resources>

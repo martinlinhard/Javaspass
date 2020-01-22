@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white_transparent2"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_marginLeft="25sp"
+        android:layout_marginRight="25sp"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_border"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_marginTop="30sp"
+            android:layout_marginBottom="30sp"
+            android:layout_weight="8">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Do you really want to restart the game?"
+                android:textAlignment="center"
+                android:textSize="17sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginBottom="30sp"
+            android:layout_weight="0">
+
+            <Button
+                android:id="@+id/btnOk"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="10sp"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_border"
+                android:backgroundTint="#28b463"
+                android:text="OK"
+                android:textColor="#FFFFFFFF" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="20sp"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_border"
+                android:backgroundTint="#C70039"
+                android:text="CANCEL"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
+
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:layout_margin="10sp"
+    android:padding="20sp"
+    android:background="@drawable/rounded_button"
+    android:layout_marginBottom="30sp"
+    android:rowCount="1">
+
+    <ImageView
+        android:layout_columnWeight="1"
+        android:src="@drawable/giro_account"
+        android:id="@+id/accountImage"/>
+
+    <LinearLayout
+        android:layout_columnWeight="6"
+        android:layout_marginLeft="10sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/accountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student-Account"
+            android:textColor="#294cb9"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/iban"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IBAN: AD7420351736532642501177"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="€ 1.600"
+            android:textAlignment="textEnd"
+            android:textSize="30sp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="1">
+
+            <TextView
+                android:layout_columnWeight="1"
+                android:text="Available:"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/amountAvailable"
+                android:layout_columnWeight="1"
+                android:text="16430"
+                android:textAlignment="textEnd"
+                android:textSize="12sp" />
+        </GridLayout>
+    </LinearLayout>
+</GridLayout>

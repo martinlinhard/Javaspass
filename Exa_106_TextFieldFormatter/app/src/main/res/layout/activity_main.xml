@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Hello World!" />
+
+    <EditText
+        android:id="@+id/edInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:ems="10"
+        android:fontFamily="@font/ubuntu"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:maxLines="5"
+        android:minLines="5"
+        android:singleLine="false" />
+
+    <TextView
+        android:id="@+id/tvStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edInput"
+        android:layout_alignBaseline="@id/cbBold"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false"
+        android:width="50sp"
+        android:text="Style" />
+
+
+    <CheckBox
+        android:id="@+id/cbBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edInput"
+        android:layout_toEndOf="@id/tvStyle"
+        android:text="Bold" />
+
+    <CheckBox
+        android:id="@+id/cbItalic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edInput"
+        android:layout_toEndOf="@id/cbBold"
+        android:text="Italics" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbBold"
+        android:width="50sp"
+        android:text="Size: 24" />
+
+    <SeekBar
+        android:id="@+id/sbSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cbBold"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/tvSize"
+        android:max="36"
+        android:min="12" />
+
+    <TextView
+        android:id="@+id/tvFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSize"
+        android:layout_marginTop="20sp"
+        android:text="Font" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSize"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="50sp"
+        android:layout_toRightOf="@id/tvFont"
+        android:checkedButton="@id/rbFont1">
+
+        <RadioButton
+            android:id="@+id/rbFont1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu"
+            android:text="Ubuntu" />
+
+        <RadioButton
+            android:id="@+id/rbFont2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway"
+            android:text="Raleway" />
+
+        <RadioButton
+            android:id="@+id/rbFont3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/coming_soon"
+            android:text="Coming Soon" />
+    </RadioGroup>
+
+</RelativeLayout>

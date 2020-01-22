@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:itemandroid="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="All" android:id="@+id/menuAll"/>
+    <item android:title="Giro" android:id="@+id/menuGiro"/>
+    <item android:title="Student" android:id="@+id/menuStudent"/>
+</menu>

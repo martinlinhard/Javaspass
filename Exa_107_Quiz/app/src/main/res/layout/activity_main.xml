@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewFlipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:id="@+id/resultScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        <TableRow android:layout_weight="2">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:text="Welcome To The Quiz!"
+                android:id="@+id/headingStartScreen"
+                android:textAlignment="center"
+                android:textColor="@color/dark_blue"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_weight="2"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:id="@+id/totalQuestions"
+                android:text="Total Questions:"
+                android:textColor="#FF000000"
+                android:textSize="18sp" />
+
+        </TableRow>
+
+        <TableRow android:layout_weight="2"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:id="@+id/correctAnswers"
+                android:text="Correct Answers:"
+                android:textColor="#FF000000"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow android:layout_weight="2"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40sp"
+                android:layout_marginBottom="60sp"
+                android:id="@+id/lastCategory"
+                android:text="Category:"
+                android:textColor="#FF000000"
+                android:textSize="18sp" />
+        </TableRow>
+
+        <TableRow android:layout_weight="2"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60sp"
+                android:id="@+id/hint"
+                android:text="Hint: Once you answered a question,\n you may hold the next button \nto reset the game."
+                android:textColor="#FF000000"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+        </TableRow>
+
+
+
+        <TableRow android:layout_weight="5"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_blue"
+                android:text="Get Started"
+                android:layout_gravity="center"
+                android:paddingLeft="60sp"
+                android:paddingRight="60sp"
+                android:textColor="@color/white" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/questionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:stretchColumns="*"
+        tools:context=".MainActivity">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:text="Kategorie"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="10">
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#FFFFFF"
+                android:gravity="center" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="6"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnLeftTop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10sp"
+                android:layout_weight="0.5"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#000000"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnRightTop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_weight="0.5"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#000000"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="6"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnLeftBottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10sp"
+                android:layout_weight="0.5"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#000000"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnRightBottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_weight="0.5"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#000000"
+                android:textColor="#FFFFFF" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="3">
+
+            <Button
+                android:id="@+id/firstAnswer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5sp"
+                android:layout_weight=".2"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#FFFFFFFF" />
+
+            <Button
+                android:id="@+id/secondAnswer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_weight=".2"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#FFFFFFFF" />
+
+            <Button
+                android:id="@+id/thirdAnswer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_weight=".2"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#FFFFFFFF" />
+
+            <Button
+                android:id="@+id/fourthAnswer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_weight=".2"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#FFFFFFFF" />
+
+            <Button
+                android:id="@+id/fifthAnswer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5sp"
+                android:layout_weight=".2"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#FFFFFFFF" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/dark_blue"
+                android:hapticFeedbackEnabled="true"
+                android:text="NEXT"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+    </TableLayout>
+
+
+</ViewFlipper>
+

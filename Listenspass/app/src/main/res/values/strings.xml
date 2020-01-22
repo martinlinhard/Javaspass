@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Listenspass</string>
+    <string name="wikipedia_url">http://de.m.wikipedia.org/wiki/%s_(Tierkreiszeichen)</string>
+</resources>

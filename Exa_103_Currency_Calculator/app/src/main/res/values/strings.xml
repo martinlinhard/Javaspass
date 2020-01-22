@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Exa_103_Currency_Calculator</string>
+    <string name="app_heading">Currency Converter</string>
+    <string name="app_result">TestResult</string>
+
+    <string name="euro_hint">1 Euro</string>
+    <string name="dollar_hint">1 Dollar</string>
+
+    <string name="left_tv_content">EUR</string>
+    <string name="right_tv_content">DOLLAR</string>
+
+    <string name="result_default_value">No input.</string>
+</resources>
