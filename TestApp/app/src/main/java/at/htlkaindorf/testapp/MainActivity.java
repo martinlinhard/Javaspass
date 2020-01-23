@@ -33,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.button);
         btn.setOnClickListener(v -> {
             Intent i = new Intent(this.getApplicationContext(), Main2Activity.class);
-            i.putExtra("pets", list);
+            //i.putParcelableArrayListExtra("pets", list);
+            i.putParcelableArrayListExtra("pets", list);
+            i.putExtra("pet", list.get(0));
             startActivity(i);
         });
     }
