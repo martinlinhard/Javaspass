@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Comparator;
 import java.util.List;
 
 public class Trip implements Serializable {
@@ -96,23 +97,25 @@ public class Trip implements Serializable {
     }
 
     public static TripResult compute(List<Trip> tripList) {
-        int totalDays = tripList.get(0).getDuration();
-        LocalDate minDate = tripList.get(0).startDate;
-        LocalDate maxDate = tripList.get(0).getEndDate();
 
-        for (int i = 1; i < tripList.size(); i++) {
-            Trip curr = tripList.get(i);
-            totalDays += curr.getDuration();
-            if (curr.getStartDate().isBefore(minDate)) {
-                minDate = curr.getStartDate();
-            }
+        int totalDays = tripList
+                .stream()
+                .mapToInt(Trip::getDuration)
+                .sum();
 
-            if (curr.getEndDate().isAfter(maxDate)) {
-                maxDate = curr.getEndDate();
-            }
-        }
+        LocalDate min = tripList
+                .stream()
+                .min(Comparator.comparing(Trip::getStartDate))
+                .get()
+                .getStartDate();
 
-        return new TripResult(totalDays, tripList.size(), minDate, maxDate);
+        LocalDate max = tripList
+                .stream()
+                .max(Comparator.comparing(Trip::getEndDate))
+                .get()
+                .getEndDate();
+
+        return new TripResult(totalDays, tripList.size(), min, max);
     }
 
     public LocalDate getEndDate() {

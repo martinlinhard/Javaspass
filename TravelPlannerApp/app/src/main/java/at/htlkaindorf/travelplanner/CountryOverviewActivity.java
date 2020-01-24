@@ -59,10 +59,9 @@ public class CountryOverviewActivity extends AppCompatActivity {
         filteredTrips.clear();
         filteredTrips.addAll(allTrips);
 
-        this.filteredTrips = this.filteredTrips.stream().filter(item -> {
-            //return true if item should remain in the list
-            return item.getCity().toLowerCase().contains(query);
-        }).collect(Collectors.toList());
+        this.filteredTrips = this.filteredTrips.stream()
+                .filter(item -> item.getCity().toLowerCase().contains(query))
+                .collect(Collectors.toList());
 
         StringBuilder sb = new StringBuilder();
         for (Trip t : filteredTrips) {
